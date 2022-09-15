@@ -44,6 +44,9 @@ $main_header_text : 40px;
 $sub_header_text : 32px;
 $p_text : 20px;
 
+body {
+  background-color: pink;
+}
 
 header {
     position: fixed;
@@ -155,16 +158,11 @@ header {
   width: 100%;
   object-fit: cover;
 }
-  .au-landing-blurb { 
+
+  #about-us-landing { 
     background-color: $dark_green;
     padding: 20%;
-    h1 {
-      @include h1-heading();
-    }
-    p {
-    @include fontp(); 
   }
-    }
 
 
 
@@ -188,12 +186,11 @@ header {
         display: none;
       }
 
-      /* code for displaying the drawer menu */
 
 #to-reveal {
-  background-color: $dark_green;
   padding: 5%;
 }
+
 .hidden-mobile {
   display: none;
 }
