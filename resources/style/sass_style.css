@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@400;600&family=Inika:wght@400;700&display=swap" rel="stylesheet">');
+@font-face {
+  font-family: "inika";
+  src: url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap");
+}
+@font-face {
+  font-family: "biryani";
+  src: url("https://fonts.googleapis.com/css2?family=Biryani:wght@400;600&display=swap");
+}
+body {
+  background-color: #293f29;
+  margin: 0%;
+}
+
 header {
   position: fixed;
   z-index: 9000;
@@ -20,18 +32,17 @@ header a {
   justify-content: center;
   align-items: center;
   gap: 8%;
-  font-size: 20px;
 }
-
-.nav-section .brand {
-  display: block;
-  height: 100%;
+.nav-section a {
+  font-size: 20px;
+  font-family: "inika";
+  color: #ffffff;
 }
 
 .nav-section > a {
+  font-size: 20px;
+  font-family: "inika";
   color: #ffffff;
-  font-family: inika;
-  font-weight: bold;
   position: relative;
 }
 
@@ -39,24 +50,61 @@ header a {
   width: 0;
   transition: width 250ms ease;
   display: block;
+  content: "";
   position: absolute;
   bottom: -4px;
 }
 
 .nav-section > a:hover::before {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid white;
   width: 100%;
 }
 
-.nav-section .header-icon img {
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+}
+.nav-section a {
+  font-size: 20px;
+  font-family: "inika";
+  color: #ffffff;
+}
+
+.nav-section > a {
+  font-size: 20px;
+  font-family: "inika";
+  color: #ffffff;
+  position: relative;
+}
+
+.mobile-nav-drop > a:before {
+  width: 0;
+  transition: width 250ms ease;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -4px;
+}
+
+.mobile-nav-drop > a:hover::before {
+  border-bottom: 2px solid white;
+  width: 20%;
+}
+
+.mobile-nav-drop .header-icon img {
   height: 1.5em;
   width: 1.5em;
 }
 
-.nav-section .header-icon:hover {
+.mobile-nav-drop .header-icon:hover {
   transform: scale(1.2);
 }
-
+.brand img {
+  width: 1.5em;
+}
 .landingimage img {
   height: 100%;
   width: 100%;
@@ -64,7 +112,10 @@ header a {
      object-fit: cover;
 }
 
-/* mobile nav */
+.hidden-mobile {
+  display: none;
+}
+
 #mobile-nav-open {
   display: none;
 }
@@ -73,23 +124,46 @@ header a {
   text-align: center;
   position: absolute;
   bottom: 35%;
-  left: 12%;
-  color: #F1F5F2;
-  font-family: "Inter";
-  font-size: clamp(0.2em, 5vw, 6em);
+  left: 10%;
+  right: 10%;
+  font-size: clamp(0.2em, 5vw, 4em);
+  color: #ffffff;
+  font-family: "inika";
 }
 
 .donate-button {
   background-color: #7e8d48;
   color: #ffffff;
   border-radius: 0.2em;
-  font-family: "inter";
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
+  font-family: "biryani";
+  font-weight: regular;
+  padding-top: 0.3em;
+  padding-bottom: 0em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
   font-size: 20px;
   border: 0em;
+}
+
+.donate-button:hover {
+  background-color: #A8B862;
+}
+
+.footer-button {
+  background-color: #7e8d48;
+  color: #ffffff;
+  border-radius: 0.2em;
+  font-family: "biryani";
+  padding-top: 0.2em;
+  padding-bottom: 0em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  font-size: 12px;
+  border: 0em;
+}
+
+.footer-button:hover {
+  background-color: #A8B862;
 }
 
 .img-wrap {
@@ -100,11 +174,950 @@ header a {
   filter: brightness(1);
 }
 
+.landing-image-wrap {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about-us-landing {
+  background-color: #293f29;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+#about-us-landing h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #ffffff;
+}
+#about-us-landing p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: white;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+}
+
+#key-issues-landing {
+  background-color: #f8f8f8;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+#key-issues-landing h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  text-align: center;
+  margin: 0%;
+  padding-bottom: 4%;
+}
+
+.volunteering-landing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+#volunteering-landing h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #ffffff;
+}
+#volunteering-landing p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: white;
+}
+
+.volunteering-landing-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.issue-1-landing-image {
+  position: relative;
+}
+
+.issue-1-landing-image img {
+  display: block;
+  width: 17em;
+  height: 21em;
+}
+
+.issue-2-landing-image {
+  position: relative;
+}
+
+.issue-2-landing-image img {
+  display: block;
+  width: 17em;
+  height: 21em;
+}
+
+.issue-3-landing-image {
+  position: relative;
+}
+
+.issue-3-landing-image img {
+  display: block;
+  width: 17em;
+  height: 21em;
+}
+
+.issue-4-landing-image {
+  position: relative;
+}
+
+.issue-4-landing-image img {
+  display: block;
+  width: 17em;
+  height: 21em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 21em;
+  width: 17em;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #7e8d48;
+}
+
+.issue-1-landing-image:hover .overlay {
+  opacity: 1;
+}
+
+.issue-2-landing-image:hover .overlay {
+  opacity: 1;
+}
+
+.issue-3-landing-image:hover .overlay {
+  opacity: 1;
+}
+
+.issue-4-landing-image:hover .overlay {
+  opacity: 1;
+}
+
+.text1 {
+  color: #f8f8f8;
+  opacity: 1;
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.key-issue-landing-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.volunteeringlanding {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.campaign-landing-grid {
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+#campaign-landing h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+#campaign-landing p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.campaignlanding {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "biryani";
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.flexgrid-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 3%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.heading-form h2 {
+  margin: 0%;
+  font-size: 16px;
+  font-family: "biryani";
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.contact-us-flex {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us-flex h2 {
+  font-size: 16px;
+  font-family: "biryani";
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  padding-bottom: 2%;
+}
+
+.footer-links > a {
+  font-size: 16px;
+  font-family: "biryani";
+  color: #ffffff;
+  font-weight: 400;
+  position: relative;
+}
+
+.footer-links > a:before {
+  width: 0;
+  transition: width 250ms ease;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 2px;
+}
+
+.footer-links > a:hover::before {
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+.contact-us-flex > a {
+  font-size: 16px;
+  font-family: "biryani";
+  color: #ffffff;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+}
+
+.contact-us-flex > a:before {
+  width: 0;
+  transition: width 250ms ease;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 2px;
+}
+
+.contact-us-flex > a:hover::before {
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+.campaign-getinvolved-grid {
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-top: 8%;
+}
+
+#campaign-getinvolved h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+#campaign-getinvolved p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.campaign-getinvolved {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#ourwork-landing {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 4%;
+}
+
+#ourwork-landing h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin: 0%;
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+
+#upcomingevents {
+  background-color: #f8f8f8;
+}
+
+.kids-involved {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.kidsinvolved-text h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  text-align: left;
+  margin: 0%;
+  padding-top: 5%;
+}
+.kidsinvolved-text p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.upcomingevents-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-right: 8%;
+  padding-left: 8%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: white;
+  margin: 2%;
+}
+
+.upcomingevents-h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  text-align: center;
+  margin: 0%;
+  padding-top: 5%;
+}
+
+.underline {
+  position: relative;
+  width: 80%;
+  border: none;
+  height: 3px;
+  background: #293f29;
+  margin-bottom: 30px;
+}
+
+.protestimage {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.protest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-right: 8%;
+  padding-left: 8%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: white;
+  margin: 2%;
+}
+
+.protest-text h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  text-align: left;
+  margin: 0%;
+  padding-top: 5%;
+}
+.protest-text p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.recycleimage {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.recycle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-right: 8%;
+  padding-left: 8%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: white;
+  margin: 2%;
+}
+
+.recycle-text h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  text-align: left;
+  margin: 0%;
+  padding-top: 5%;
+}
+.recycle-text p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.campaign-page {
+  background-color: #f8f8f8;
+  padding: 10%;
+}
+.campaign-page h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+.campaign-page h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+.campaign-page p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.keyissue-flex1 h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.keyissuepage-image img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.keyissuespage-landing {
+  padding-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.keyissuespage-landing h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+
+.keyissue-flex1 {
+  padding: 5%;
+  text-align: left;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+.keyissue-flex1 h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+.keyissue-flex1 p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.keyissue-flexgrid {
+
+  padding-bottom: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #f8f8f8;
+}
+
+.campaign-keyissues-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.campaign-keyissues-grid h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #ffffff;
+}
+.campaign-keyissues-grid p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: white;
+}
+
+.campaign-keyissues-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.campaign-keyissues-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: #f8f8f8;
+}
+.campaign-keyissues-grid-2 h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+.campaign-keyissues-grid-2 p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.campaign-keyissues-image-2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contactinfo-h2-flex {
+  padding-right: 3%;
+}
+
+#contactus-page {
+  background-color: #f8f8f8;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.contactus-page-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3%;
+}
+.contactus-page-flex h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+
+.contactinfo-flex h2 {
+  font-size: 20px;
+  font-family: "biryani";
+  font-weight: bold;
+  color: #293f29;
+  margin: 0%;
+}
+
+.contactinfo-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-info {
+  background-color: #ffffff;
+  padding: 3%;
+}
+
+.enquiry-form {
+  background-color: #ffffff;
+  padding: 3%;
+}
+
+.underline2 {
+  position: relative;
+  border: none;
+  height: 3px;
+  background: #293f29;
+  margin-bottom: 30px;
+}
+
+.flexgrid-form input[type=text] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0%;
+  resize: vertical;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #293f29;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.name-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.donation-image img {
+  padding: 3%;
+}
+
+.dontation-details-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+  padding-top: 10%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  padding-top: 2%;
+}
+
+.donation-payment h1 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  flex: 25%;
+}
+
+.col-75 {
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #7e8d48;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 5em;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #A8B862;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+#privacy {
+  background-color: #f2f2f2;
+  padding: 10%;
+}
+#privacy h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+#privacy p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+#organics {
+  background-color: #f2f2f2;
+  padding: 10%;
+}
+#organics h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+#organics p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+#careers {
+  background-color: #f2f2f2;
+  padding: 10%;
+}
+#careers h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+#careers h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+}
+#careers p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.careers-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.web-developer {
+  background-color: white;
+  padding: 2%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.accounts {
+  background-color: white;
+  padding: 2%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.data-entry {
+  background-color: white;
+  padding: 2%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.office-assistant {
+  background-color: white;
+  padding: 2%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+#ourwork-gardens {
+  background-color: #f2f2f2;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+#ourwork-gardens h1 {
+  font-size: 30px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  text-align: center;
+}
+#ourwork-gardens h2 {
+  font-size: 20px;
+  font-family: "inika";
+  font-weight: bold;
+  color: #293f29;
+  margin: 0%;
+}
+#ourwork-gardens p {
+  font-size: 15px;
+  font-family: "biryani";
+  color: #293f29;
+}
+
+.garden-1 {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 3%;
+}
+
+.garden-1-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.garden-1-text {
+  padding: 2%;
+}
+.copy-right {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+@media (max-width: 800px) {
+  .garden-1 {
+    flex-wrap: wrap;
+  }
+  #privacy {
+    margin-top: 8em;
+  }
+  #organics {
+    margin-top: 8em;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
 @media only screen and (max-width: 991px) {
+  .campaign-page {
+    padding-top: 8em;
+  }
+  .keyissue-flexgrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .keyissue-flex1 p {
+    font-size: 15px;
+    font-family: "biryani";
+    color: #293f29;
+    margin-right: 10%;
+  }
   label img {
-    height: 100%;
-    width: 100%;
+    height: 3em;
+    width: 2em;
     display: block;
+    margin-right: 1em;
+  }
+  .donate-nav-link {
+    display: none;
   }
   header .nav-section > a {
     display: none;
@@ -115,13 +1128,8 @@ header a {
   header .nav-section > .donate-button {
     display: none;
   }
-  /* code for displaying the drawer menu */
   #to-reveal {
-    background-color: #293f29;
     padding: 5%;
-  }
-  .hidden-mobile {
-    display: none;
   }
   #mobile-nav-open {
     display: block;
@@ -135,11 +1143,161 @@ header a {
     font-family: inika;
     font-weight: bold;
     position: relative;
+    padding: 2%;
   }
-  #about-us-landing {
-    background-color: #293f29;
+  #key-issue-flex-images {
+    flex-wrap: wrap;
   }
-  #about-us-landing p {
-    color: #ffffff;
+  .contactus-page-flex {
+    flex-wrap: wrap;
   }
-}/*# sourceMappingURL=sass_style.css.map */
+  .contactus-page-flex h2 {
+    font-size: 16px;
+    font-family: "biryani";
+    color: #293f29;
+    font-weight: 400;
+  }
+  .contactinfo-h2-flex {
+    padding-right: 3%;
+    padding-bottom: 3%;
+  }
+  .volunteering-landing-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  .volunteering-landing-text {
+    order: 2;
+  }
+  .campaign-landing-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7%;
+  }
+  .campaign-landing-text {
+    order: 2;
+  }
+  .key-issue-landing-flex {
+    justify-content: center;
+  }
+  .key-issue-landing-flex a {
+    margin: 5%;
+  }
+  .overlay {
+    height: 6em;
+    width: 17em;
+    opacity: 1;
+    top: 240;
+  }
+  .text1 {
+    font-size: 25px;
+    top: 50%;
+  }
+  .campaign-getinvolved-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7%;
+    margin-top: 8em;
+  }
+  .getinvolved-text {
+    order: 2;
+  }
+  .upcomingevents-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7%;
+  }
+  .kidsinvolved-text {
+    order: 2;
+  }
+  .protest-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7%;
+  }
+  .protest-text {
+    order: 2;
+  }
+  .recycle-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7%;
+  }
+  .recycle-text {
+    order: 2;
+  }
+  .campaign-keyissues-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  .campaign-keyissues {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .campaign-keyissues-2 {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .campaign-keyissues-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  #ourwork-gardens {
+    padding-top: 10%;
+  }
+  .keyissuespage-landing {
+    padding-top: 10%;
+  }
+  #contactus-page {
+    padding-top: 10%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .flexgrid-footer {
+    flex-direction: column;
+  }
+  .contactus-page-flex {
+    padding-top: 30%;
+  }
+  .keyissuespage-landing {
+    padding-top: 25%;
+  }
+  #ourwork-gardens {
+    padding-top: 20%;
+  }
+  #ourwork-gardens h1 {
+    font-size: 20px;
+  }
+  .keyissuespage-landing {
+    padding-top: 20%;
+  }
+  .keyissue-flexgrid {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  #contactus-page {
+    padding-top: 1%;
+  }
+  #contactus-page h1 {
+    font-size: 20px;
+    margin: 0%;
+  }
+  .keyissue-flex1 p {
+    font-size: 12px;
+  }
+}
