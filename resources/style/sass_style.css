@@ -21,7 +21,12 @@ header {
   box-sizing: border-box;
   background-color: #293f29;
 }
-
+.brand img {
+  width: 1em;
+}
+.burger-menu img {
+  width: 2em;
+}
 header a {
   text-decoration: none;
 }
@@ -102,9 +107,7 @@ header a {
 .mobile-nav-drop .header-icon:hover {
   transform: scale(1.2);
 }
-.brand img {
-  width: 1.5em;
-}
+
 .landingimage img {
   height: 100%;
   width: 100%;
@@ -396,7 +399,7 @@ header a {
 .flexgrid-footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-top: 3%;
   padding-right: 10%;
   padding-left: 10%;
@@ -684,9 +687,7 @@ header a {
 }
 
 .keyissuespage-landing {
-  padding-top: 5%;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-top: 10%;
   background-color: #f8f8f8;
   text-align: center;
 }
@@ -700,11 +701,6 @@ header a {
 .keyissue-flex1 {
   padding: 5%;
   text-align: left;
-  margin: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
 }
 .keyissue-flex1 h2 {
   font-size: 20px;
@@ -716,11 +712,13 @@ header a {
   font-size: 15px;
   font-family: "biryani";
   color: #293f29;
+  margin-right: 5%;
+  padding-bottom: 5%;
 }
 
 .keyissue-flexgrid {
-
-  padding-bottom: 3%;
+  padding-right: 8%;
+  padding-left: 8%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #f8f8f8;
@@ -789,9 +787,7 @@ header a {
 
 #contactus-page {
   background-color: #f8f8f8;
-  padding-top: 5%;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-top: 10%;
 }
 
 .contactus-page-flex {
@@ -812,7 +808,6 @@ header a {
   font-family: "biryani";
   font-weight: bold;
   color: #293f29;
-  margin: 0%;
 }
 
 .contactinfo-flex {
@@ -875,7 +870,8 @@ input[type=text], select, textarea {
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #f2f2f2;
-  padding-top: 10%;
+  margin-top: 10%;
+  padding: 3%;
 }
 
 .row {
@@ -1033,9 +1029,7 @@ span.price {
 
 #ourwork-gardens {
   background-color: #f2f2f2;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-top: 5%;
+  padding: 10%;
 }
 #ourwork-gardens h1 {
   font-size: 30px;
@@ -1074,10 +1068,6 @@ span.price {
 .garden-1-text {
   padding: 2%;
 }
-.copy-right {
-  padding-right: 10%;
-  padding-left: 10%;
-}
 
 @media (max-width: 800px) {
   .garden-1 {
@@ -1111,10 +1101,9 @@ span.price {
     margin-right: 10%;
   }
   label img {
-    height: 3em;
-    width: 2em;
+    height: 100%;
+    width: 100%;
     display: block;
-    margin-right: 1em;
   }
   .donate-nav-link {
     display: none;
@@ -1257,19 +1246,14 @@ span.price {
     padding-top: 4%;
     padding-bottom: 4%;
   }
-  #ourwork-gardens {
-    padding-top: 10%;
-  }
-  .keyissuespage-landing {
-    padding-top: 10%;
-  }
-  #contactus-page {
-    padding-top: 10%;
-  }
 }
 @media only screen and (max-width: 425px) {
   .flexgrid-footer {
     flex-direction: column;
+  }
+  .contactinfo-h2-flex h2 {
+    padding-right: 3%;
+    padding-bottom: 10%;
   }
   .contactus-page-flex {
     padding-top: 30%;
@@ -1277,27 +1261,4 @@ span.price {
   .keyissuespage-landing {
     padding-top: 25%;
   }
-  #ourwork-gardens {
-    padding-top: 20%;
-  }
-  #ourwork-gardens h1 {
-    font-size: 20px;
-  }
-  .keyissuespage-landing {
-    padding-top: 20%;
-  }
-  .keyissue-flexgrid {
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-  #contactus-page {
-    padding-top: 1%;
-  }
-  #contactus-page h1 {
-    font-size: 20px;
-    margin: 0%;
-  }
-  .keyissue-flex1 p {
-    font-size: 12px;
-  }
-}
+}/*# sourceMappingURL=sass_style.css.map */
