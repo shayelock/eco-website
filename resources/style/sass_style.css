@@ -60,6 +60,14 @@ header a {
   width: 100%;
 }
 
+.brand img {
+  width: 1.5em;
+}
+
+#mobile-nav-open img {
+  width: 2em;
+}
+
 .nav-section {
   display: flex;
   flex-direction: row;
