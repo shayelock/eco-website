@@ -1063,12 +1063,7 @@ span.price {
 .garden-1-text {
   padding: 2%;
 }
-.brand img {
-  width: 1.5em;
-}
-#mobile-nav-open img {
-  width: 2em;
-}
+
 @media (max-width: 800px) {
   .garden-1 {
     flex-wrap: wrap;
